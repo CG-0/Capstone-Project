@@ -3,4 +3,15 @@ from django.http import HttpResponse, HttpRequest
 
 # Create your views here.
 def landing_page_view(request):
-    return HttpResponse("<h1>SeedBank</h1><p>Welcome to my project for WEB 3200!</p>")
+    context = {
+        "name": "Home",
+    }
+
+    return render(request, "content/home.html", context)
+
+def about_view(request):
+    context = {
+        "name": "About",
+    }
+
+    return render(request, "content/about.html", context)
