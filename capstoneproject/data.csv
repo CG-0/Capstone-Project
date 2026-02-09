@@ -1,4 +1,4 @@
-Seed,Genus,Species,Type,Continent of Origin
+name,genus,species,seed_type,continent
 Hickory King Corn,Zea,Zea Mays,Open-Pollinated,North America
 Celebrity Tomato,Solanum,Solanum Lycopersicum,Hybrid,North America
 Stargazer Lilies,Lilium,Lilium Oriental Hybrids (Lilium x Orientalis),Hybrid,Asia
