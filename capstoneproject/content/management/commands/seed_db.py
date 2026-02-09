@@ -22,7 +22,7 @@ class Command(BaseCommand):
                         continent=row['continent']
                     )
                     if created:
-                        print("It was a succes!")
+                        print("It was a success!")
                     else:
                         print("Oops... Something went wrong")
                 self.stdout.write(self.style.SUCCESS("Import was succesful!"))
