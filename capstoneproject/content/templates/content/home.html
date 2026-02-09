@@ -4,7 +4,12 @@
 {% block title %} Landing Page {% endblock %}
 
 <!-- Content -->
-{% block content %}
-<h1>SeedBank</h1>
-<p>Welcome to my project for WEB 3200!</p>
-{% endblock %}
+{% block content %} {% if seeds %}
+<ul>
+  {% for s in seeds%}
+  <li>
+    <a href="{{ s.get_absolute_url }}">{{ s.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %} {% endblock %}

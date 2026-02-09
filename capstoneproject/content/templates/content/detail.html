@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+<!-- Page Title -->
+{% block title %} Detail Page {% endblock %}
+
+<!-- Content -->
+{% block content %}
+<p><strong>Genus:</strong>{{ s.genus }}</p>
+<p><strong>Species:</strong>{{ s.species }}</p>
+<p><strong>Seed Type:</strong>{{ s.seed_type }}</p>
+<p><strong>Continent:</strong>{{ s.continent}}</p>
+{% endblock %}
