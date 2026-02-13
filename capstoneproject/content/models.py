@@ -4,27 +4,16 @@ from django.urls import reverse
 
 # Create your models here.
 class Seed(models.Model):
-    HYBRID = "HYB"
-    HEIRLOOM = "HE"
-    OPEN_POLLINATED = "OP"
-
-    SEED_TYPES = {
-        HYBRID: "Hybrid",
-        HEIRLOOM: "Heirloom",
-        OPEN_POLLINATED: "Open-Pollinated",
-    }
-
     name = models.CharField(max_length=100)
     genus = models.CharField(max_length=80)
     species = models.CharField(max_length=150)
-    seed_type = models.CharField(max_length=3, choices=SEED_TYPES, default=HYBRID)
+    seed_type = models.CharField(max_length=15)
     continent = models.CharField(max_length=20)
-    slug = models.SlugField(max_length=500, null=True, help_text="SEO-friendly URLs")
-
-    def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.name)
-        super().save(*args, **kwargs)
+    slug = models.SlugField(max_length=500, null=True, db_index=True, help_text="SEO-friendly URLs")
 
     def get_absolute_url(self):
-        return reverse(seeds-detail, kwargs={"pk": self.pk})
+        return reverse("seeds-detail", args=[self.slug])
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        super().save(*args, **kwargs)

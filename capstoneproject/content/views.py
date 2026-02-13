@@ -4,7 +4,7 @@ from .models import Seed
 
 # Create your views here.
 def landing_page_view(request):
-    seed = Seed.objects.all().order_by('name').values
+    seed = Seed.objects.all().order_by('name')
 
     context = {
         'seeds': seed,
@@ -20,9 +20,14 @@ def about_view(request):
     return render(request, "content/about.html", context)
 
 def detail_view(request, slug):
-    slug = get_object_or_404(Seed, slug=slug)
+    seed = get_object_or_404(Seed, slug=slug)
+
     context = {
-        'record': record,
+        'name': seed.name,
+        'genus': seed.genus,
+        'species': seed.species,
+        'seed_type': seed.seed_type,
+        'continent': seed.continent
     }
 
     return render(request, "content/detail.html", context)
