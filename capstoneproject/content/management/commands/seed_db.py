@@ -18,7 +18,7 @@ class Command(BaseCommand):
                         name=row['name'],
                         genus=row['genus'],
                         species=row['species'],
-                        seed_type='HYBRID',
+                        seed_type=row['seed_type'],
                         continent=row['continent']
                     )
                     if created:
