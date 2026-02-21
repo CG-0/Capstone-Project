@@ -4,7 +4,7 @@
 {% block title %} Landing Page {% endblock %}
 
 <!-- Content -->
-{% block content %} {% if seeds %}
+{% block content %}
 <ul>
   {% for s in seeds%}
   <li>
@@ -12,4 +12,4 @@
   </li>
   {% endfor %}
 </ul>
-{% endif %} {% endblock %}
+{% endblock %}

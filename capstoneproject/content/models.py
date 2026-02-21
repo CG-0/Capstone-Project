@@ -21,6 +21,9 @@ class Seed(models.Model):
     continent = models.CharField(max_length=20)
     slug = models.SlugField(max_length=500, null=True, db_index=True, help_text="SEO-friendly URLs")
 
+    def __str__(self):
+        return f"{self.name}"
+    
     def get_absolute_url(self):
         return reverse("seeds-detail", args=[self.slug])
 
