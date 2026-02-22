@@ -1,5 +1,15 @@
 from django.contrib import admin
-from .models import Seed
+from .models import Seed, Use, Donor, DonorProfile
 
 # Register your models here.
-admin.site.register(Seed)
+class SeedAdmin(admin.ModelAdmin):
+    #readonly_fields = ('slug',)
+    prepopulated_fields = {"slug": ('name',)}
+    list_filter = ('donors', 'use')
+    list_display = ('name', 'genus', 'species')
+    search_fields = ('name', 'donors')
+
+admin.site.register(Seed, SeedAdmin)
+admin.site.register(Use)
+admin.site.register(Donor)
+admin.site.register(DonorProfile)

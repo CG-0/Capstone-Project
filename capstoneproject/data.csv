@@ -1,11 +1,11 @@
-name,genus,species,seed_type,continent
-Hickory King Corn,Zea,Zea Mays,Open-Pollinated,North America
-Celebrity Tomato,Solanum,Solanum Lycopersicum,Hybrid,North America
-Stargazer Lilies,Lilium,Lilium Oriental Hybrids (Lilium x Orientalis),Hybrid,Asia
-Moon & Star Watermelon,Citrullus,Citrullus Lanatus,Heirloom,North America
-Roma Tomato,Solanum,Solanum Lycopersicum,Heirloom,North America
-Jalapeño,Capsicum,Annuum,Open-Pollinated,North America
-Sweet Siberian Watermelon,Citrullus,Citrullus Lanatus,Heirloom,Europe
-Meyer Lemon Tree,Citrus,Citrus x Meyeri,Hybrid,Asia
-Provider Bean,Phaseolus,Vulgaris,Open-Pollinated,North America
-Little Gem Lettuce,Lactuca,Sativa,Heirloom,Europe
+name,genus,species,seed_type,continent,use,donors
+Hickory King Corn,Zea,Zea Mays,Open-Pollinated,North America,Animal Feed,Matt Jones
+Celebrity Tomato,Solanum,Solanum Lycopersicum,Hybrid,North America,Culinary,Jerry King
+Stargazer Lilies,Lilium,Lilium Oriental Hybrids (Lilium x Orientalis),Hybrid,Asia,Ornamental,Renee Shepherd
+Moon & Star Watermelon,Citrullus,Citrullus Lanatus,Heirloom,North America,Culinary,Jerry King
+Roma Tomato,Solanum,Solanum Lycopersicum,Heirloom,North America,Culinary,Matt Jones
+Jalapeño,Capsicum,Capsicum Annuum,Open-Pollinated,North America,Culinary,Jerry King
+Sweet Siberian Watermelon,Citrullus,Citrullus Lanatus,Heirloom,Europe,Culinary,Matt Jones
+Meyer Lemon Tree,Citrus,Citrus x Meyeri,Hybrid,Asia,Ornamental,Renee Shepherd
+Provider Bean,Phaseolus,Phaseolus Vulgaris,Open-Pollinated,North America,Culinary,Matt Jones
+Little Gem Lettuce,Lactuca,Lactuca Sativa,Heirloom,Europe,Culinary,Matt Jones
