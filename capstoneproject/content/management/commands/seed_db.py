@@ -48,6 +48,10 @@ class Command(BaseCommand):
                     # 4. Handle Seed
                     seed, b_created = Seed.objects.get_or_create(
                         name=row['name'],
+                        genus=row['genus'],
+                        species=row['species'],
+                        seed_type=row['seed_type'],
+                        continent=row['continent'],
                         defaults={
                             'use': use_obj
                         }
